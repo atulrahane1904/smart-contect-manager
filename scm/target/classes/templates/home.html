@@ -1,26 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <Link rel="stylesheet" data-th-href="@{'/css/output.css'}"> </Link>
-    <Style>
-/* 
-    .container{
-        margin: auto;
-        width: 50%;
-        padding: 30px;
-        background: #e2e2e2;
-    } */
-    </Style>
+    <title>Home page</title>
 </head>
-<body >
-    <div class="bg-gray-200 mx-auto mt-4"><h2>Welcome</h2>
-        <h1 data-th-text="${name}"></h1>
-        <h1 data-th-text="${github}"></h1>
-        <a data-th-href="${github}"> Click to open github</a>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa consequatur possimus laboriosam nulla, omnis ex minus neque, porro quis velit? Debitis odio autem, delectus blanditiis iusto sint a voluptatem.</p></div>
-      
+<body>
+    <section id="content">
+
+        <h2>Welcome to home page </h2>
+    </section>
+    <script>
+        console.log("this is home page");
+    </script>
 </body>
 </html>

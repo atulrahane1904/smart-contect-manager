@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- create whole page as fragment -->
+<html  
+ lang="en" th:fragment="parent(content,title,script)" 
+ xmlns:th="http://www.thymeleaf.org" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-th-replace="${title}">base page </title>
+  <!-- flowbite link -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <!-- flowbite  js script link  -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+</head>
+<body>
+  <!-- common header -->
+  <div data-th-replace="navbar :: navbar" ></div>
+ 
+  <!--Dynamic contect  -->
+<div class="p-4">
+  <section data-th-replace="${content}"></section>
+</div>
+  
+<!-- <h1>static contect</h1> -->
+  <!-- <h1>base page content</h1> -->
+  <footer class="p-4">This is footer</footer>
+  <th-block data-th-replace="${script}"></th-block>
+</body>
+</html>
